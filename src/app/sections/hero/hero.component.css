@@ -139,7 +139,7 @@
 
 .editor-tabs {
   display: flex;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: 12.5px;
   overflow-x: auto;
 }
@@ -164,7 +164,7 @@
 
 .editor-body {
   padding: 22px;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: 13.2px;
   min-height: 280px;
 }

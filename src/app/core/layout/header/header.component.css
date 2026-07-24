@@ -50,7 +50,7 @@
 }
 
 .nav a {
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: 13px;
   color: var(--muted);
   text-decoration: none;
