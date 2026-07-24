@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo" (click)="closeMenu()">
+      <span class="logo-sym">&lt;/&gt;</span>
+      <span class="logo-text">matheus<span class="dot">.</span>mota</span>
+    </a>
+
+    <!-- Menu Desktop & Mobile -->
+    <nav class="nav" [class.open]="mobileOpen()">
+      <a href="#sobre" (click)="closeMenu()"><span class="nav-no">01.</span> sobre</a>
+      <a href="#experiencia" (click)="closeMenu()"><span class="nav-no">02.</span> experiência</a>
+      <a href="#projetos" (click)="closeMenu()"><span class="nav-no">03.</span> projetos</a>
+      <a href="#stack" (click)="closeMenu()"><span class="nav-no">04.</span> stack</a>
+      <a href="#contato" (click)="closeMenu()"><span class="nav-no">05.</span> contato</a>
+    </nav>
+
+    <!-- Botão Hambúrguer -->
+    <button
+      class="burger"
+      [class.active]="mobileOpen()"
+      (click)="toggleMenu()"
+      aria-label="Alternar Menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

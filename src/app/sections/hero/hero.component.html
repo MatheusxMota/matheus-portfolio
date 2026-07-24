@@ -1,0 +1,69 @@
+<section class="hero" style="border-top:none;padding-top:70px;">
+  <div class="wrap">
+    <span class="badge"><span class="dot"></span>{{ data.dev.status }}</span>
+    <div class="hero-grid">
+      <div>
+        <div class="hero-greet">Olá, eu sou</div>
+        <h1>Matheus <span class="accent">Mota</span></h1>
+        <div class="role">{{ data.dev.role }}</div>
+        <p class="desc">{{ data.dev.bio }}</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary" download>↓ Download Currículo</a>
+          <a href="#contato" class="btn">✉ Contato</a>
+        </div>
+        <div class="socials">
+          @for (s of data.socials; track s.platform) {
+            <app-social-link [url]="s.url" [label]="s.label" [platform]="s.platform" />
+          }
+        </div>
+      </div>
+
+      <!-- Editor de Código -->
+      <div class="editor" appReveal>
+        <div class="editor-titlebar">
+          <div class="editor-dots"><span></span><span></span><span></span></div>
+        </div>
+        <div class="editor-tabs">
+          <div class="editor-tab" [class.active]="activeTab() === 'sobre-mim'" (click)="setTab('sobre-mim')">sobre-mim.ts</div>
+          <div class="editor-tab" [class.active]="activeTab() === 'foco'" (click)="setTab('foco')">foco.ts</div>
+          <div class="editor-tab" [class.active]="activeTab() === 'status'" (click)="setTab('status')">status.json</div>
+        </div>
+        <div class="editor-body">
+          @if (activeTab() === 'sobre-mim') {
+            <div class="tab-panel active">
+              <div class="code-line"><span class="line-no">1</span><span class="line-content"><span class="k">const</span> dev = &#123;</span></div>
+              <div class="code-line"><span class="line-no">2</span><span class="line-content">&nbsp;&nbsp;nome: <span class="s">"{{ data.dev.name }}"</span>,</span></div>
+              <div class="code-line"><span class="line-no">3</span><span class="line-content">&nbsp;&nbsp;papel: <span class="s">"{{ data.dev.role }}"</span>,</span></div>
+              <div class="code-line"><span class="line-no">4</span><span class="line-content">&nbsp;&nbsp;formacao: <span class="s">"{{ data.dev.education }}"</span>,</span></div>
+              <div class="code-line"><span class="line-no">5</span><span class="line-content">&nbsp;&nbsp;local: <span class="s">"{{ data.dev.location }}"</span></span></div>
+              <div class="code-line"><span class="line-no">6</span><span class="line-content">&#125;;<span class="cursor-blink"></span></span></div>
+            </div>
+          }
+
+          @if (activeTab() === 'foco') {
+            <div class="tab-panel active">
+              <div class="code-line"><span class="line-no">1</span><span class="line-content"><span class="k">function</span> <span class="fn">foco</span>() &#123;</span></div>
+              <div class="code-line"><span class="line-no">2</span><span class="line-content">&nbsp;&nbsp;<span class="k">return</span> [</span></div>
+              <div class="code-line"><span class="line-no">3</span><span class="line-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">"APIs REST"</span>,</span></div>
+              <div class="code-line"><span class="line-no">4</span><span class="line-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">"Modelagem de dados"</span>,</span></div>
+              <div class="code-line"><span class="line-no">5</span><span class="line-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">"POO, SOLID, Clean Code"</span>,</span></div>
+              <div class="code-line"><span class="line-no">6</span><span class="line-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">"Integração entre sistemas"</span></span></div>
+              <div class="code-line"><span class="line-no">7</span><span class="line-content">&nbsp;&nbsp;];</span></div>
+              <div class="code-line"><span class="line-no">8</span><span class="line-content">&#125;<span class="cursor-blink"></span></span></div>
+            </div>
+          }
+
+          @if (activeTab() === 'status') {
+            <div class="tab-panel active">
+              <div class="code-line"><span class="line-no">1</span><span class="line-content">&#123;</span></div>
+              <div class="code-line"><span class="line-no">2</span><span class="line-content">&nbsp;&nbsp;<span class="p">"disponibilidade"</span>: <span class="s">"aberto a propostas"</span>,</span></div>
+              <div class="code-line"><span class="line-no">3</span><span class="line-content">&nbsp;&nbsp;<span class="p">"experiencia_atual"</span>: <span class="s">"Quant Tecnologia"</span>,</span></div>
+              <div class="code-line"><span class="line-no">4</span><span class="line-content">&nbsp;&nbsp;<span class="p">"stack_favorita"</span>: [<span class="s">"TS"</span>, <span class="s">"Angular"</span>, <span class="s">"Spring Boot"</span>]</span></div>
+              <div class="code-line"><span class="line-no">5</span><span class="line-content">&#125;<span class="cursor-blink"></span></span></div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg: #0a0f14;
+  --panel: #0f171e;
+  --panel-2: #141e28;
+  --border: #1b2735;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --muted-2: #484f58;
+  --mint: #6ee7c0;
+  --blue: #38bdf8;
+  --amber: #f59e0b;
+  --violet: #c084fc;
+  --mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Tipografia Global */
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--mint);
+  letter-spacing: 1px;
+}
+
+/* Botões Globais */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-family: var(--mono);
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  border-color: var(--mint);
+  color: var(--mint);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--mint);
+  color: #08131a;
+  border-color: var(--mint);
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #5cd6af;
+  color: #08131a;
+}
+
+/* Animação Reveal (Intersection Observer) */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
