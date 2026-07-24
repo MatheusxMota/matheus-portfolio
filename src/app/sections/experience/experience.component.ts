@@ -49,7 +49,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         margin: 10px 0 16px;
       }
       .sec-title .accent {
-        color: var(--mint);
+        color: var(--violet);
       }
       .job-header {
         margin-bottom: 32px;
@@ -89,7 +89,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         height: 11px;
         border-radius: 50%;
         background: var(--bg);
-        border: 2px solid var(--mint);
+        border: 2px solid var(--violet);
       }
       .job-item h4 {
         font-size: 16px;

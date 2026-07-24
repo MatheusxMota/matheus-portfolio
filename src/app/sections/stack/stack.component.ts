@@ -40,7 +40,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         margin: 10px 0 16px;
       }
       .sec-title .accent {
-        color: var(--mint);
+        color: var(--violet);
       }
       .stack-group {
         margin-bottom: 38px;
@@ -58,7 +58,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         content: '';
         width: 18px;
         height: 2px;
-        background: var(--mint);
+        background: var(--violet);
       }
       .stack-grid {
         display: grid;
@@ -81,7 +81,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         font-family: var(--mono);
       }
       .stack-item:hover {
-        border-color: var(--mint);
+        border-color: var(--violet);
         color: var(--text);
         transform: translateY(-2px);
       }

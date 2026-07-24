@@ -36,11 +36,11 @@
 }
 
 .logo-sym {
-  color: var(--mint);
+  color: var(--violet);
 }
 
 .logo .dot {
-  color: var(--mint);
+  color: var(--violet);
 }
 
 .nav {
@@ -58,11 +58,11 @@
 }
 
 .nav a:hover {
-  color: var(--mint);
+  color: var(--violet);
 }
 
 .nav-no {
-  color: var(--mint);
+  color: var(--violet);
   margin-right: 4px;
 }
 

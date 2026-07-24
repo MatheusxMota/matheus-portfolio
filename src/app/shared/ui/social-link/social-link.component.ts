@@ -25,8 +25,8 @@ import { Component, input } from '@angular/core';
         font-weight: 600;
       }
       a:hover {
-        color: var(--mint);
-        border-color: var(--mint);
+        color: var(--violet);
+        border-color: var(--violet);
         transform: translateY(-2px);
       }
     `,

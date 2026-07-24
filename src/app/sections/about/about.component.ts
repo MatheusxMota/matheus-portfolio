@@ -52,7 +52,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         margin: 10px 0 16px;
       }
       .sec-title .accent {
-        color: var(--mint);
+        color: var(--violet);
       }
       .sec-lead {
         color: var(--muted);

@@ -25,7 +25,7 @@ import { Component, input } from '@angular/core';
         height: 100%;
       }
       .card:hover {
-        border-color: var(--mint);
+        border-color: var(--violet);
         transform: translateY(-3px);
       }
       .card-icon {
@@ -36,7 +36,7 @@ import { Component, input } from '@angular/core';
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--mint);
+        color: var(--violet);
         margin-bottom: 16px;
         font-size: 15px;
         font-family: var(--mono);
