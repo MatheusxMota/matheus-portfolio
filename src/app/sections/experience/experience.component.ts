@@ -10,7 +10,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
   template: `
     <section id="experiencia">
       <div class="wrap" appReveal>
-        <span class="eyebrow">experiência</span>
+        <span class="eyebrow">Experiência</span>
         <h2 class="sec-title">Experiência <span class="accent">Profissional</span></h2>
 
         @if (jobs.length > 0) {

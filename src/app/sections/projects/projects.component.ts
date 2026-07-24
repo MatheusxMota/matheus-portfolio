@@ -10,7 +10,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
   template: `
     <section id="projetos">
       <div class="wrap" appReveal>
-        <span class="eyebrow">projetos</span>
+        <span class="eyebrow">Projetos</span>
         <h2 class="sec-title">Projetos <span class="accent">Pessoais</span></h2>
 
         @for (p of projects; track p.title) {

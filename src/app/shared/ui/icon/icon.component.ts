@@ -3,16 +3,9 @@ import { Component, input } from '@angular/core';
 @Component({
   selector: 'app-icon',
   standalone: true,
-  template: `<span class="ico">{{ name() }}</span>`,
-  styles: [
-    `
-      .ico {
-        font-size: 16px;
-        display: inline-block;
-      }
-    `,
-  ],
+  template: `<!-- Cannot render dynamic Lucide icons with current API -->`,
 })
 export class IconComponent {
-  name = input.required<string>();
+  icon = input.required<any>();
 }
+

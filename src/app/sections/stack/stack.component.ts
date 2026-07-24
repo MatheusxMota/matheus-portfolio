@@ -1,16 +1,53 @@
 import { Component } from '@angular/core';
 import { PORTFOLIO_DATA } from '../../core/data/portfolio-data';
-import { IconComponent } from '../../shared/ui/icon/icon.component';
+import {
+  LucideGlobe,
+  LucidePalette,
+  LucideBraces,
+  LucideType,
+  LucideCode,
+  LucideAtom,
+  LucideTriangle,
+  LucideWind,
+  LucideLayout,
+  LucideHexagon,
+  LucideCoffee,
+  LucideLeaf,
+  LucideDatabase,
+  LucideGitBranch,
+  LucideCloud,
+  LucideFileText,
+} from '@lucide/angular';
+import { GithubIconComponent } from '../../shared/ui/icon/github-icon.component';
 import { RevealDirective } from '../../shared/directives/reveal.directive';
 
 @Component({
   selector: 'app-stack',
   standalone: true,
-  imports: [IconComponent, RevealDirective],
+  imports: [
+    LucideGlobe,
+    LucidePalette,
+    LucideBraces,
+    LucideType,
+    LucideCode,
+    LucideAtom,
+    LucideTriangle,
+    LucideWind,
+    LucideLayout,
+    LucideHexagon,
+    LucideCoffee,
+    LucideLeaf,
+    LucideDatabase,
+    LucideGitBranch,
+    LucideCloud,
+    LucideFileText,
+    GithubIconComponent,
+    RevealDirective,
+  ],
   template: `
     <section id="stack">
       <div class="wrap" appReveal>
-        <span class="eyebrow">stack</span>
+        <span class="eyebrow">Tecnologias</span>
         <h2 class="sec-title">Tecnologias & <span class="accent">Ferramentas</span></h2>
 
         @for (group of techGroups; track group.title) {
@@ -19,7 +56,26 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
             <div class="stack-grid">
               @for (item of group.items; track item.name) {
                 <div class="stack-item">
-                  <app-icon [name]="item.icon" />
+                  @switch (item.name) {
+                    @case ('HTML5') { <svg lucideGlobe></svg> }
+                    @case ('CSS') { <svg lucidePalette></svg> }
+                    @case ('JavaScript') { <svg lucideBraces></svg> }
+                    @case ('TypeScript') { <svg lucideType></svg> }
+                    @case ('Angular') { <svg lucideCode></svg> }
+                    @case ('React') { <svg lucideAtom></svg> }
+                    @case ('Next.js') { <svg lucideTriangle></svg> }
+                    @case ('Tailwind') { <svg lucideWind></svg> }
+                    @case ('Shadcn/UI') { <svg lucideLayout></svg> }
+                    @case ('Node.js') { <svg lucideHexagon></svg> }
+                    @case ('Express') { <svg lucideBraces></svg> }
+                    @case ('Java') { <svg lucideCoffee></svg> }
+                    @case ('Spring Boot') { <svg lucideLeaf></svg> }
+                    @case ('PostgreSQL') { <svg lucideDatabase></svg> }
+                    @case ('Git') { <svg lucideGitBranch></svg> }
+                    @case ('GitHub') { <app-github-icon /> }
+                    @case ('Supabase') { <svg lucideCloud></svg> }
+                    @case ('Swagger') { <svg lucideFileText></svg> }
+                  }
                   {{ item.name }}
                 </div>
               }

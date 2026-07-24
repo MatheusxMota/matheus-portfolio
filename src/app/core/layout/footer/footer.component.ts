@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       <div class="wrap">
         <p>
           © {{ currentYear }} Matheus Mota · Desenvolvido com Angular
-          {{ angularVersion }} (Zoneless)
+          {{ angularVersion }} Zoneless
         </p>
       </div>
     </footer>
@@ -28,5 +28,5 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   currentYear = new Date().getFullYear();
-  angularVersion = '19'; // Versão em uso do framework
+  angularVersion = '22.0.7'; // Versão em uso do framework
 }

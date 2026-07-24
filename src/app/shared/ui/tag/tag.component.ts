@@ -9,7 +9,7 @@ import { Component, input } from '@angular/core';
       .tag {
         font-family: var(--mono);
         font-size: 11.5px;
-        color: var(--blue);
+        color: var(--violet);
         background: #0e1a26;
         border: 1px solid #1b3348;
         padding: 4px 10px;

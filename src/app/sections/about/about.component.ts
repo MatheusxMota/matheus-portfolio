@@ -9,9 +9,9 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
   template: `
     <section id="sobre">
       <div class="wrap" appReveal>
-        <span class="eyebrow">sobre</span>
+        <span class="eyebrow">Sobre</span>
         <h2 class="sec-title">
-          Desenvolvedor Full Stack com foco em <span class="accent">aplicações web escaláveis</span>
+          Desenvolvedor Full Stack com foco em <span class="accent">Aplicações Web escaláveis</span>
         </h2>
         <p class="sec-lead">
           Atuo no desenvolvimento de soluções para problemas reais, com experiência na criação de
@@ -24,17 +24,17 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         <div class="cards3">
           <app-card
             icon="⌘"
-            title="Back-end"
-            description="APIs, modelagem relacional e integração entre sistemas."
+            title="Front-end"
+            description="TypeScript, Angular, React, HTML, CSS, TailwindCSS, ShadCN."
           />
           <app-card
             icon="</>"
-            title="Boas Práticas"
-            description="POO, SOLID e Clean Code para código escalável."
+            title="Back-end"
+            description="Node.js, Express, REST APIs, modelagem de banco de dados relacional e integração entre sistemas."
           />
           <app-card
             icon="⑂"
-            title="Workflow"
+            title="Ferramentas"
             description="Git, GitHub, PRs, code review e metodologias ágeis."
           />
         </div>
