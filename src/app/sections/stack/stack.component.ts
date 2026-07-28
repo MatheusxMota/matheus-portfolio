@@ -164,7 +164,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         padding: 18px 25px;
         text-align: center;
         font-size: 12.5px;
-        color: var(--violet);
+        color: var(--text);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -175,7 +175,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
       }
       .stack-item:hover {
         border-color: var(--violet);
-        color: var(--text);
+        color: var(--violet);
         transform: translateY(-2px);
       }
 
