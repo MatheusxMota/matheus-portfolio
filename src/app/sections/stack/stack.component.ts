@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
 import { PORTFOLIO_DATA } from '../../core/data/portfolio-data';
-import { GithubIconComponent } from '../../shared/ui/icon/github-icon.component';
 import { RevealDirective } from '../../shared/directives/reveal.directive';
-import { NgComponentOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-stack',
   standalone: true,
   imports: [
-    GithubIconComponent,
     RevealDirective,
-    NgComponentOutlet
   ],
   template: `
     <section id="stack">
@@ -23,24 +19,15 @@ import { NgComponentOutlet } from '@angular/common';
             <h3>{{ group.title }}</h3>
             <div class="marquee-container">
               <div class="marquee-inner">
-                @for (item of group.items; track item.name) {
+                @for (item of [...group.items, ...group.items]; track $index) {
                   <div class="stack-item">
-                    @if (item.name === 'GitHub') {
-                      <app-github-icon />
-                    } @else {
-                      <ng-container *ngComponentOutlet="$any(item.icon)" />
-                    }
-                    {{ item.name }}
-                  </div>
-                }
-                <!-- Duplicate list for seamless loop -->
-                @for (item of group.items; track 'dup-' + item.name) {
-                  <div class="stack-item">
-                    @if (item.name === 'GitHub') {
-                      <app-github-icon />
-                    } @else {
-                      <ng-container *ngComponentOutlet="$any(item.icon)" />
-                    }
+                    <img
+                      [src]="'https://cdn.simpleicons.org/' + item.icon"
+                      [alt]="item.name"
+                      loading="lazy"
+                      width="28"
+                      height="28"
+                    />
                     {{ item.name }}
                   </div>
                 }
@@ -115,6 +102,11 @@ import { NgComponentOutlet } from '@angular/common';
         border-color: var(--violet);
         color: var(--violet);
         transform: translateY(-2px);
+      }
+      .stack-item img {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
       }
 
       @keyframes marquee {
