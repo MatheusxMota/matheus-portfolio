@@ -25,17 +25,17 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
           <app-card
             icon="⌘"
             title="Front-end"
-            description="TypeScript, Angular, React, HTML, CSS, TailwindCSS, ShadCN."
+            description="Foco em código limpo, arquitetura escalável, SEO e alta performance usando Angular, Next.js e ecossistema TypeScript."
           />
           <app-card
             icon="</>"
             title="Back-end"
-            description="Node.js, Express, REST APIs, modelagem de banco de dados relacional e integração entre sistemas."
+            description="Desenvolvimento de sistemas robustos e escaláveis, aplicando arquitetura limpa, segurança, autenticação e boas práticas de design."
           />
           <app-card
             icon="⑂"
             title="Ferramentas"
-            description="Git, GitHub, PRs, code review e metodologias ágeis."
+            description="Controle de versão, integração, documentação clara de APIs e uso estratégico de IA para agilizar a entrega."
           />
         </div>
       </div>

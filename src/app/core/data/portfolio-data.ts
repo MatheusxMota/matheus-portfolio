@@ -32,7 +32,7 @@ export const PORTFOLIO_DATA = {
     location: 'Rio de Janeiro, BR',
     email: 'matheusxmota@gmail.com.br',
     status: 'Disponível para oportunidades',
-    bio: 'Desenvolvo aplicações web modernas utilizando tecnologias como Next.js, TypeScript, Java e Python — com foco em performance, escalabilidade e boas experiências de usuário.',
+    bio: 'Desenvolvo aplicações modernas utilizando C#, .NET e Angular, com experiência em produção com Next.js utilizando TypeScript. Foco em performance, escalabilidade e boas experiências de usuário.',
   } as DevProfile,
 
   jobs: [

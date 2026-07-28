@@ -15,7 +15,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
 
         @for (p of projects; track p.title) {
           <div class="project-card">
-            <h3>📦 {{ p.title }}</h3>
+            <h3>{{ p.title }}</h3>
             <p>{{ p.description }}</p>
             <div class="tags">
               @for (tag of p.tags; track tag) {
