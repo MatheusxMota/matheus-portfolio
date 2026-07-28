@@ -145,7 +145,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         height: 2px;
         background: var(--violet);
       }
-      
+
       .marquee-container {
         width: 100%;
         overflow: hidden;
@@ -164,7 +164,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         padding: 18px 25px;
         text-align: center;
         font-size: 12.5px;
-        color: var(--muted);
+        color: var(--violet);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -178,7 +178,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         color: var(--text);
         transform: translateY(-2px);
       }
-      
+
       @keyframes marquee {
         from { transform: translateX(0); }
         to { transform: translateX(-50%); }
