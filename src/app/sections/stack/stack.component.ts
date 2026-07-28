@@ -53,32 +53,60 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         @for (group of techGroups; track group.title) {
           <div class="stack-group">
             <h3>{{ group.title }}</h3>
-            <div class="stack-grid">
-              @for (item of group.items; track item.name) {
-                <div class="stack-item">
-                  @switch (item.name) {
-                    @case ('HTML5') { <svg lucideGlobe></svg> }
-                    @case ('CSS') { <svg lucidePalette></svg> }
-                    @case ('JavaScript') { <svg lucideBraces></svg> }
-                    @case ('TypeScript') { <svg lucideType></svg> }
-                    @case ('Angular') { <svg lucideCode></svg> }
-                    @case ('React') { <svg lucideAtom></svg> }
-                    @case ('Next.js') { <svg lucideTriangle></svg> }
-                    @case ('Tailwind') { <svg lucideWind></svg> }
-                    @case ('Shadcn/UI') { <svg lucideLayout></svg> }
-                    @case ('Node.js') { <svg lucideHexagon></svg> }
-                    @case ('Express') { <svg lucideBraces></svg> }
-                    @case ('Java') { <svg lucideCoffee></svg> }
-                    @case ('Spring Boot') { <svg lucideLeaf></svg> }
-                    @case ('PostgreSQL') { <svg lucideDatabase></svg> }
-                    @case ('Git') { <svg lucideGitBranch></svg> }
-                    @case ('GitHub') { <app-github-icon /> }
-                    @case ('Supabase') { <svg lucideCloud></svg> }
-                    @case ('Swagger') { <svg lucideFileText></svg> }
-                  }
-                  {{ item.name }}
-                </div>
-              }
+            <div class="marquee-container">
+              <div class="marquee-inner">
+                @for (item of group.items; track item.name) {
+                  <div class="stack-item">
+                    @switch (item.name) {
+                      @case ('HTML5') { <svg lucideGlobe></svg> }
+                      @case ('CSS') { <svg lucidePalette></svg> }
+                      @case ('JavaScript') { <svg lucideBraces></svg> }
+                      @case ('TypeScript') { <svg lucideType></svg> }
+                      @case ('Angular') { <svg lucideCode></svg> }
+                      @case ('React') { <svg lucideAtom></svg> }
+                      @case ('Next.js') { <svg lucideTriangle></svg> }
+                      @case ('Tailwind') { <svg lucideWind></svg> }
+                      @case ('Shadcn/UI') { <svg lucideLayout></svg> }
+                      @case ('Node.js') { <svg lucideHexagon></svg> }
+                      @case ('Express') { <svg lucideBraces></svg> }
+                      @case ('Java') { <svg lucideCoffee></svg> }
+                      @case ('Spring Boot') { <svg lucideLeaf></svg> }
+                      @case ('PostgreSQL') { <svg lucideDatabase></svg> }
+                      @case ('Git') { <svg lucideGitBranch></svg> }
+                      @case ('GitHub') { <app-github-icon /> }
+                      @case ('Supabase') { <svg lucideCloud></svg> }
+                      @case ('Swagger') { <svg lucideFileText></svg> }
+                    }
+                    {{ item.name }}
+                  </div>
+                }
+                <!-- Duplicate list for seamless loop -->
+                @for (item of group.items; track 'dup-' + item.name) {
+                  <div class="stack-item">
+                    @switch (item.name) {
+                      @case ('HTML5') { <svg lucideGlobe></svg> }
+                      @case ('CSS') { <svg lucidePalette></svg> }
+                      @case ('JavaScript') { <svg lucideBraces></svg> }
+                      @case ('TypeScript') { <svg lucideType></svg> }
+                      @case ('Angular') { <svg lucideCode></svg> }
+                      @case ('React') { <svg lucideAtom></svg> }
+                      @case ('Next.js') { <svg lucideTriangle></svg> }
+                      @case ('Tailwind') { <svg lucideWind></svg> }
+                      @case ('Shadcn/UI') { <svg lucideLayout></svg> }
+                      @case ('Node.js') { <svg lucideHexagon></svg> }
+                      @case ('Express') { <svg lucideBraces></svg> }
+                      @case ('Java') { <svg lucideCoffee></svg> }
+                      @case ('Spring Boot') { <svg lucideLeaf></svg> }
+                      @case ('PostgreSQL') { <svg lucideDatabase></svg> }
+                      @case ('Git') { <svg lucideGitBranch></svg> }
+                      @case ('GitHub') { <app-github-icon /> }
+                      @case ('Supabase') { <svg lucideCloud></svg> }
+                      @case ('Swagger') { <svg lucideFileText></svg> }
+                    }
+                    {{ item.name }}
+                  </div>
+                }
+              </div>
             </div>
           </div>
         }
@@ -100,6 +128,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
       }
       .stack-group {
         margin-bottom: 38px;
+        overflow: hidden;
       }
       .stack-group h3 {
         font-family: var(--mono);
@@ -116,16 +145,23 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         height: 2px;
         background: var(--violet);
       }
-      .stack-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
+      
+      .marquee-container {
+        width: 100%;
+        overflow: hidden;
+        mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+      }
+      .marquee-inner {
+        display: flex;
         gap: 14px;
+        width: max-content;
+        animation: marquee 20s linear infinite;
       }
       .stack-item {
         background: var(--panel);
         border: 1px solid var(--border);
         border-radius: 8px;
-        padding: 18px 10px;
+        padding: 18px 25px;
         text-align: center;
         font-size: 12.5px;
         color: var(--muted);
@@ -135,21 +171,17 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         gap: 10px;
         transition: all 0.2s;
         font-family: var(--mono);
+        min-width: 120px;
       }
       .stack-item:hover {
         border-color: var(--violet);
         color: var(--text);
         transform: translateY(-2px);
       }
-      @media (max-width: 920px) {
-        .stack-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-      @media (max-width: 640px) {
-        .stack-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
+      
+      @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
       }
     `,
   ],
