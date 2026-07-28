@@ -73,13 +73,13 @@ body {
 
 .btn-primary {
   background: var(--violet);
-  color: var(--text);
+  color: var(--bg);
   border-color: var(--violet);
   font-weight: 600;
 }
 
 .btn-primary:hover {
-  background: #d8b4fe;
+  background: #0b4f06;
   color: #08131a;
 }
 

@@ -30,8 +30,8 @@ export const PORTFOLIO_DATA = {
     role: 'Desenvolvedor Full Stack',
     education: 'Analise e Desenvolvimento de Sistemas ',
     location: 'Rio de Janeiro, BR',
-    email: 'contato@matheusm.dev',
-    status: 'disponível para oportunidades',
+    email: 'matheusxmota@gmail.com.br',
+    status: 'Disponível para oportunidades',
     bio: 'Desenvolvo aplicações web modernas utilizando tecnologias como Next.js, TypeScript, Java e Python — com foco em performance, escalabilidade e boas experiências de usuário.',
   } as DevProfile,
 

@@ -17,7 +17,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
             <a [href]="'mailto:' + dev.email" class="btn btn-primary">✉ {{ dev.email }}</a>
             @for (s of socials; track s.platform) {
               <a [href]="s.url" target="_blank" rel="noopener" class="btn"
-                >{{ s.label }} {{ s.platform }}</a
+                > {{ s.platform }}</a
               >
             }
           </div>
