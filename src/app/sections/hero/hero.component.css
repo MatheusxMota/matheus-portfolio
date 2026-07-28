@@ -59,7 +59,7 @@
 }
 
 .hero h1 .accent {
-  background: linear-gradient(90deg, var(--violet), var(--blue));
+  background: var(--violet);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
