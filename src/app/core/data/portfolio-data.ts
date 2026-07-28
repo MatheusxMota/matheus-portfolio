@@ -15,13 +15,12 @@ import {
   LucideTriangle,
   LucideWind,
   LucideLayout,
-  LucideHexagon,
-  LucideCoffee,
-  LucideLeaf,
   LucideDatabase,
   LucideGitBranch,
   LucideCloud,
   LucideFileText,
+  LucideServer,
+  LucideBoxes,
 } from '@lucide/angular';
 
 export const PORTFOLIO_DATA = {
@@ -93,10 +92,10 @@ export const PORTFOLIO_DATA = {
     {
       title: '⌘ Back-end',
       items: [
-        { name: 'Node.js', icon: LucideHexagon },
-        { name: 'Express', icon: LucideBraces },
-        { name: 'Java', icon: LucideCoffee },
-        { name: 'Spring Boot', icon: LucideLeaf },
+        { name: 'Node.js', icon: LucideServer },
+        { name: 'C#', icon: LucideCode },
+        { name: '.NET', icon: LucideBoxes },
+        { name: 'ASP.NET Core', icon: LucideCloud },
         { name: 'PostgreSQL', icon: LucideDatabase },
       ],
     },
