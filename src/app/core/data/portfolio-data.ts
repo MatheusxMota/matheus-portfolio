@@ -62,7 +62,7 @@ export const PORTFOLIO_DATA = {
       title: '</> Front-end',
       items: [
         { name: 'HTML5', icon: 'html5' },
-        { name: 'CSS', icon: 'css3' },
+        { name: 'CSS', icon: 'css' },
         { name: 'JavaScript', icon: 'javascript' },
         { name: 'TypeScript', icon: 'typescript' },
         { name: 'Angular', icon: 'angular' },
@@ -76,7 +76,7 @@ export const PORTFOLIO_DATA = {
       title: '⌘ Back-end',
       items: [
         { name: 'Node.js', icon: 'nodedotjs' },
-        { name: 'C#', icon: 'csharp' },
+        { name: 'C#', icon: 'c' },
         { name: '.NET', icon: 'dotnet' },
         { name: 'ASP.NET Core', icon: 'dotnet' },
         { name: 'PostgreSQL', icon: 'postgresql' },
