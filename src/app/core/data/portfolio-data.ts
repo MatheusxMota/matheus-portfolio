@@ -53,7 +53,14 @@ export const PORTFOLIO_DATA = {
       description:
         'API REST para gerenciamento de pedidos com Spring Boot 3 e Java 21. Arquitetura em camadas, mapeamento com MapStruct, validação com Bean Validation e documentação interativa via Swagger. Segurança de credenciais com variáveis de ambiente, pronta para deploy em cloud.',
       tags: ['Java 21', 'Spring Boot', 'PostgreSQL', 'MapStruct', 'Swagger', 'JPA'],
-      githubUrl: 'https://github.com/',
+      githubUrl: 'https://github.com/MatheusxMota/api_ordermanagement',
+    },
+    {
+      title: 'Travel Planner API',
+      description:
+        'API REST em ASP.NET Core que gera roteiros de viagem personalizados com IA — atividades, clima, segurança e transporte. Provedor de IA desacoplado via interface, chamadas paralelas com Task.WhenAll, resiliência com Polly (retry/backoff) e cache em memória. Documentação interativa via Scalar.',
+      tags: ['.NET 10', 'C#', 'ASP.NET Core', 'Hugging Face', 'Polly', 'xUnit'],
+      githubUrl: 'https://github.com/MatheusxMota/API_TRAVEL_PLANNER',
     },
   ] as Project[],
 

@@ -48,6 +48,7 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
         border: 1px solid var(--border);
         border-radius: 10px;
         padding: 26px 28px;
+        margin-top: 24px;
       }
       .project-card h3 {
         font-size: 18px;
